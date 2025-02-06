@@ -11,6 +11,12 @@ function adicionar(){
     amigo.value = '';
 };
 
+/*function remover(){
+    let amigoRemovido = participantesHTML.click;
+    participantes = participantes.filter(amigoRemovido.value);
+    participantesHTML.innerHTML = participantes;
+};*/
+
 function definirAmigoSecreto(lista){
     let nomeAmigoSorteado = lista[parseInt(Math.random()*lista.length)];
     return nomeAmigoSorteado;
@@ -25,10 +31,9 @@ function sortear(){
         amigoSecreto = definirAmigoSecreto(participantes);
     }
     sorteados.push(amigoSecreto);
-    sorteio.push([` 
-         ${participantes[i]} ---> ${amigoSecreto}`]); 
+    sorteio.push([`${participantes[i]} ---> ${amigoSecreto}`]); 
     };
-    resultadoSorteio.innerHTML= sorteio;
+    resultadoSorteio.innerHTML= `${sorteio} <br>`;
 };
 
 
